@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ClassForOutput {
 
+
     public static void prinit1() {
         System.out.println(Math.min(Double.MIN_VALUE, 0.0d));
     }
@@ -45,12 +46,10 @@ if you run this program on Linux or Solaris, you will get different values.
         str2 = str2.reverse();
         System.out.println(str2);
     }
-/*
-Output:
-noitamotuA
- */
-
-
+        /*
+        Output:
+        noitamotuA
+         */
 
         public static void printit4() {
             String str = "Saket Saurav";
@@ -59,11 +58,54 @@ noitamotuA
                 System.out.print(chars[i]);
             }
         }
-    /*
-    Output:
-     varuaS tekaS
+            /*
+            Output:
+             varuaS tekaS
+             */
 
-     */
+
+    public static void printit5(){
+        System.out.print('A' + 'B');
+    }
+     // 131
+
+    public static void printit6(){
+        System.out.print("A" + "B" + 'A');
+        }
+        //ABA
+
+    public static void printit7(){
+        System.out.print(20+ 1.34f + "A" + "B");
+        }
+        //21.34AB
+
+    public static void printit8() {
+        char [] str={'i','n','c','l','u','d','e','h','e','l','p'};
+        System.out.println(str.toString());
+        }
+        // [C@19e0bfd (Memory Address)
+
+    public static void printit9() {
+        System.out.print("Hello");
+        System.out.println("Guys!");
+        }
+
+        //HelloGuys!
+
+
+    public static void printit10() {
+        char a=0x41;    //Unicode of 'A'
+        char b=0x42;    //Unicode of 'B'
+
+        System.out.print(a+"" + b+"");
+        System.out.print("-");
+        System.out.print(a+b);
+        }
+        // AB-131
+
+
+
+
 
 
 

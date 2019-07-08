@@ -84,7 +84,7 @@ public class ArrayInterviewQuestions {
 			}
 		}
 		array = Arrays.copyOf(array, array.length - 1);
-		SimpleArray.printArray(array);
+		ArrayHelper.printArray(array);
 	}
 
 	//There is an array with every element repeated twice except one. Find that element?
@@ -243,7 +243,7 @@ public class ArrayInterviewQuestions {
 					}
 				}
 		}
-		SimpleArray.printArray(array);
+		ArrayHelper.printArray(array);
 	}
 
 	// How to find if there is a sub array with sum equal to zero? 
@@ -284,7 +284,7 @@ public class ArrayInterviewQuestions {
 
 			}
 		}
-		SimpleArray.printArray(array3);
+		ArrayHelper.printArray(array3);
 	}
 
 	// How to find minimum value in a rotated sorted array?
@@ -303,20 +303,42 @@ public class ArrayInterviewQuestions {
 		return array1[low];
 	}
 
-	// ccolors balls 1.Yello 2.Red 3.Blue
+	// sort Array with Colors in this order: 1.Yello 2.Red 3.Blue
 	public static void colorBalls(String[] array) {
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[j].equals("b")) {
-					SimpleArray.swap(array, i, j);
+					ArrayHelper.swap(array, i, j);
 				}
 				if (array[j].equals("r")) {
-					SimpleArray.swap(array, i, j);
+					ArrayHelper.swap(array, i, j);
 				}
 				if (array[j].equals("y")) {
-					SimpleArray.swap(array, i, j);
+					ArrayHelper.swap(array, i, j);
 				}
 			}
+		}
+	}
+
+
+	// sort Array with Colors in this order: 1.Yello 2.Red 3.Blue  Make it With O(n)
+	public static void colorBalls1(String[] array) {
+		int y = 0, b = array.length - 1;
+
+		for (int i = 0; i <= b;) {
+			if (array[i].equals("y")) {
+				if(i!=y) {
+					ArrayHelper.swap(array, i, y);
+				}
+				y++; i++;
+				continue;
+			}
+
+			if (array[i].equals("b")) {
+				ArrayHelper.swap(array, i, b--);
+				continue;
+			}
+			i++;
 		}
 	}
 
@@ -325,11 +347,11 @@ public class ArrayInterviewQuestions {
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i + 1; j < array.length; j++) {
 				if (!(array[j] % 3 == 1)) {
-					SimpleArray.swap(array, i, j);
+					ArrayHelper.swap(array, i, j);
 				}
 
 				if (!(array[j] % 2 == 1)) {
-					SimpleArray.swap(array, i, j);
+					ArrayHelper.swap(array, i, j);
 				}
 
 			}

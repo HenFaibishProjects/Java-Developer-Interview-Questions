@@ -10,7 +10,7 @@ public class BubbleSort {
 		for (int i = 0; i < array.length-1; i++) {
 			for (int j=i+1; j<array.length-1; j++) {
 				if (array[i]>array[j]) {
-					SimpleArray.swap(array, i, j); 
+					ArrayHelper.swap(array, i, j);
 				}
 			}
 		}

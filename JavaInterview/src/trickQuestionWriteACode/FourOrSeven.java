@@ -10,7 +10,6 @@ function that get int (4 or 7)
 * when the function get 7 it return 4
 * what input is verified 4 or 7
 
-
  */
 
 public class FourOrSeven {

@@ -16,13 +16,12 @@ public class ClassForOutput {
       */
 
 
-
-        public static void prinit2() throws Exception {
-            char[] chars = new char[] {'\u0097'};
-            String str = new String(chars);
-            byte[] bytes = str.getBytes();
-            System.out.println(Arrays.toString(bytes));
-        }
+    public static void prinit2() throws Exception {
+        char[] chars = new char[]{'\u0097'};
+        String str = new String(chars);
+        byte[] bytes = str.getBytes();
+        System.out.println(Arrays.toString(bytes));
+    }
 /*
   Answer: The trickiness of this question lies on character encoding and how String to byte array conversion works.
   In this program, we are first creating a String from a character array,
@@ -38,7 +37,6 @@ if you run this program on Linux or Solaris, you will get different values.
  */
 
 
-
     public static void printit3() {
         String str = "Automation";
         StringBuilder str2 = new StringBuilder();
@@ -51,88 +49,124 @@ if you run this program on Linux or Solaris, you will get different values.
         noitamotuA
          */
 
-        public static void printit4() {
-            String str = "Saket Saurav";
-            char chars[] = str.toCharArray();  // converted to character array and printed in reverse order
-            for(int i= chars.length-1; i>=0; i--) {
-                System.out.print(chars[i]);
-            }
+    public static void printit4() {
+        String str = "Saket Saurav";
+        char chars[] = str.toCharArray();  // converted to character array and printed in reverse order
+        for (int i = chars.length - 1; i >= 0; i--) {
+            System.out.print(chars[i]);
         }
+    }
             /*
             Output:
              varuaS tekaS
              */
 
 
-    public static void printit5(){
+    public static void printit5() {
         System.out.print('A' + 'B');
     }
-     // 131
+    // 131
 
-    public static void printit6(){
+    public static void printit6() {
         System.out.print("A" + "B" + 'A');
-        }
-        //ABA
+    }
+    //ABA
 
-    public static void printit7(){
-        System.out.print(20+ 1.34f + "A" + "B");
-        }
-        //21.34AB
+    public static void printit7() {
+        System.out.print(20 + 1.34f + "A" + "B");
+    }
+    //21.34AB
 
     public static void printit8() {
-        char [] str={'i','n','c','l','u','d','e','h','e','l','p'};
+        char[] str = {'i', 'n', 'c', 'l', 'u', 'd', 'e', 'h', 'e', 'l', 'p'};
         System.out.println(str.toString());
-        }
-        // [C@19e0bfd (Memory Address)
+    }
+    // [C@19e0bfd (Memory Address)
 
     public static void printit9() {
         System.out.print("Hello");
         System.out.println("Guys!");
-        }
+    }
 
-        //HelloGuys!
+    //HelloGuys!
 
 
     public static void printit10() {
-        char a=0x41;    //Unicode of 'A'
-        char b=0x42;    //Unicode of 'B'
+        char a = 0x41;    //Unicode of 'A'
+        char b = 0x42;    //Unicode of 'B'
 
-        System.out.print(a+"" + b+"");
+        System.out.print(a + "" + b + "");
         System.out.print("-");
-        System.out.print(a+b);
+        System.out.print(a + b);
+    }
+    // AB-131
+
+
+    public static void printit11() {
+
+        String one = "Hello";
+        String two = "Hello";
+
+        if (one == two) {
+            System.out.println("one == two");
+        } else {
+            System.out.println("one != two");
         }
-        // AB-131
+    }
+    //one == two
+
+    public static void printit12() {
+        foo(null);
+    }
+
+    public static void foo(Object o) {
+        System.out.println("Object impl");
+    }
+
+    public static void foo(String s) {
+        System.out.println("String impl");
+    }
+
+    //String impl
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public static void printit13() {
+        long longWithL = 1000 * 60 * 60 * 24 * 365L;
+        long longWithoutL = 1000 * 60 * 60 * 24 * 365;
+        System.out.println(longWithL);
+        System.out.println(longWithoutL);
+    }
+//31536000000
+//1471228928
+//    In case of the first variable, we are explicitly creating it as long by placing an “L” at the end,
+//    so the compiler will treat this at long and assign it to the first variable.
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

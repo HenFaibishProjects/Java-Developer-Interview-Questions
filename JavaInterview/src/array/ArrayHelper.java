@@ -3,11 +3,21 @@ package array;
 public class ArrayHelper {
 
 
-	// Print array
+	// Print array int (primitive  types)
 	public static void printArray(int[] anyArray) {
 		for (int i=0 ; i< anyArray.length ; i++) {
 			System.out.println(anyArray[i]);
-		}		
+		}
+	}
+
+
+// Pring array (Objects)
+	public static <E> void printArray(E[] inputArray) {
+		// display array elements
+		for (E element : inputArray)
+			System.out.printf("%s ", element);
+
+		System.out.println();
 	}
 
 	public void findIndexOfSpecificValue(int[] anyArray,int valueToSearch) {
